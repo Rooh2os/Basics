@@ -1,4 +1,4 @@
-import os
+import os,json
 
 def clear():
     # For Windows
@@ -7,3 +7,14 @@ def clear():
     # For macOS and Linux
     else:
         os.system('clear')
+
+def json_write(file,data,indent):
+    with open(file,"w") as f:
+        json.dump(data,f,indent)
+
+def json_read(file):
+    try:
+        with open("data","r") as f:
+            return json.load(file)
+    except(FileNotFoundError,):
+        return(FileNotFoundError)
