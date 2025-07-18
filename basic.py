@@ -18,3 +18,11 @@ def json_read(file):
             return json.load(file)
     except(FileNotFoundError,):
         return(FileNotFoundError)
+    
+def print_list(lst):
+    global master
+    global to_dos
+    ptr = 0
+    while ptr < len(lst):
+        print(ptr,":",lst[ptr])
+        ptr += 1
