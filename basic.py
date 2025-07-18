@@ -21,6 +21,6 @@ def json_read(file:str):
     
 def print_list(lst:list):
     ptr = 0
-    while ptr < len(list(lst)):
+    while ptr < len(lst):
         print(f"{ptr}: {lst[ptr]}")
         ptr += 1
