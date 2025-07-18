@@ -19,7 +19,7 @@ def json_read(file):
     except(FileNotFoundError,):
         return(FileNotFoundError)
     
-def print_list(lst):
+def print_list(lst:list):
     ptr = 0
     while ptr < len(list(lst)):
         print(f"{ptr}: {lst[ptr]}")
