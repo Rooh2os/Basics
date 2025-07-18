@@ -17,7 +17,7 @@ def json_read(file:str):
         with open("data","r") as f:
             return json.load(file)
     except(FileNotFoundError):
-        return(FileNotFoundError)
+        raise(FileNotFoundError)
     
 def print_list(lst:list):
     ptr = 0
