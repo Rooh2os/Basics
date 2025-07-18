@@ -8,15 +8,15 @@ def clear():
     else:
         os.system('clear')
 
-def json_write(file,data,indent):
+def json_write(file:str,data,indent:int):
     with open(file,"w") as f:
         json.dump(data,f,indent=indent)
 
-def json_read(file):
+def json_read(file:str):
     try:
         with open("data","r") as f:
             return json.load(file)
-    except(FileNotFoundError,):
+    except(FileNotFoundError):
         return(FileNotFoundError)
     
 def print_list(lst:list):
