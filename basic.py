@@ -20,9 +20,7 @@ def json_read(file):
         return(FileNotFoundError)
     
 def print_list(lst):
-    global master
-    global to_dos
     ptr = 0
-    while ptr < len(lst):
-        print(ptr,":",lst[ptr])
+    while ptr < len(list(lst)):
+        print(f"{ptr}: {lst[ptr]}")
         ptr += 1
