@@ -19,8 +19,11 @@ def json_read(file:str):
     except(FileNotFoundError):
         raise(FileNotFoundError)
     
-def print_list(lst:list):
+def print_list(lst:list,*,numbers:bool = True):
     ptr = 0
     while ptr < len(lst):
-        print(f"{ptr}: {lst[ptr]}")
+        if numbers == True:
+            print(f"{ptr}: {lst[ptr]}")
+        else:
+            print(f"{lst[ptr]}")
         ptr += 1
